@@ -1,0 +1,93 @@
+{
+  "parser": "babel-eslint",
+  "env": {
+    // "es6": true,
+    "browser": true,
+    "node": true
+  },
+  "plugins": ["react-hooks"],
+  "extends": [
+    "react-app",
+    "plugin:react/recommended",
+    // "airbnb/hooks",
+    "stylelint",
+    "plugin:prettier/recommended"
+  ],
+  "parserOptions": {
+    "ecmaVersion": 2018,
+    // "project": "./tsconfig.json",
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true // Allows for the parsing of JSX
+    }
+  },
+  "rules": {
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "@typescript-eslint/no-use-before-define": "off",
+    "@typescript-eslint/prefer-regexp-exec": "off",
+    "react/jsx-one-expression-per-line": ["off", { "allow": "single-child" }],
+    "@typescript-eslint/no-explicit-any": ["off", { "ignoreRestArgs": true }],
+    "node/no-unsupported-features/es-syntax": "off",
+    "node/no-unpublished-import": "off",
+    "node/no-unpublished-require": "off",
+    "node/no-missing-import": "off",
+    "prefer-rest-params": "off",
+    "no-restricted-globals": "off",
+    "no-param-reassign": "off",
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
+    "eslint-comments/no-unused-disable": "off",
+    "eslint-comments/no-unlimited-disable": "off",
+    "node/no-extraneous-import": "off",
+    "prefer-regex-literals": "off",
+    "node/no-extraneous-require": "off",
+    "react/jsx-filename-extension": [
+      "error",
+      { "extensions": [".js", ".jsx", ".ts", ".tsx"] }
+    ],
+    "quotes": [
+      "error",
+      "double",
+      { "avoidEscape": true, "allowTemplateLiterals": true }
+    ],
+    "max-len": ["error", { "code": 100, "ignoreUrls": true }],
+    "prefer-promise-reject-errors": ["off"],
+    // "react/jsx-filename-extension": ["off"],
+    // "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "react/prop-types": ["warn"],
+    "no-return-assign": ["off"],
+    "no-use-before-define": "off",
+    "no-console": "off",
+    "no-bitwise": "off",
+    "no-restricted-syntax": [
+      "error",
+      {
+        "selector": "CallExpression[callee.object.name='console'][callee.property.name!=/^(log|warn|error|info|trace)$/]",
+        "message": "Unexpected property on console object was called"
+      }
+    ],
+    "prettier/prettier": [
+      "error",
+      {
+        // "endOfLine": "auto"
+        // "printWidth": 80,
+        // "trailingComma": "all",
+        // "tabWidth": 2,
+        // "semi": true,
+        // "singleQuote": false
+        "no-console": "off"
+      },
+      {
+        "fileInfoOptions": {
+          // "usePrettierrc": false,
+          "withNodeModules": true
+        }
+      }
+    ]
+  },
+  "settings": {
+    "react": {
+      "version": "detect" // Tells eslint-plugin-react to automatically detect the version of React to use
+    }
+  }
+}

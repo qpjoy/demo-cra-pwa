@@ -1,0 +1,18 @@
+@keyframes plusIcon {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.data-loading {
+  animation: plusIcon 2s linear infinite;
+  background: url('../img/basic/Pic_waitting.svg') center no-repeat;
+  background-size: 100%;
+  height: 200px;
+  margin: 60px auto 0;
+  width: 200px;
+}
