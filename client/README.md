@@ -24,4 +24,11 @@
 2. yarn add babel-plugin-import -D
 3. yarn add node-sass sass-resources-loader
 4. yarn add postcss-pxtorem postcss-write-svg cssnano -D
-5.
+
+### flexible
+
+1. yarn add amfe-flexible postcss-pxtorem -D
+
+### lazy load
+
+1. yarn add react-router-dom @loadable/component
