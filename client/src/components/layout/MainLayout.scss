@@ -1,0 +1,22 @@
+.yellowTheme {
+  background: $main-theme-color;
+}
+
+.blueTheme {
+  font-size: 12px;
+  background: $sub-theme-color;
+}
+
+.redTheme {
+  background: red;
+}
+
+.nav {
+  padding: 4px 0;
+
+  .link {
+    background: #fff;
+    border-right: 1px solid black;
+    padding: 0 20px;
+  }
+}
