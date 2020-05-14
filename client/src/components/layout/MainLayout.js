@@ -1,19 +1,49 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { useHistory } from "react-router-dom";
+import { _historyHandler } from "@/utils";
 // import styles from "./MainLayout.scss";
 
-import TestLayout from "./TestLayout.module.css";
+// import TestLayout from "./TestLayout.module.css";
 
 const MainLayout = props => {
   const { children } = props;
+  const history = useHistory();
+  const [showPre, toggleShowPre] = useState(false);
+
+  useEffect(() => {
+    if (history.location.pathname === "/") {
+      toggleShowPre(true);
+    } else {
+      toggleShowPre(false);
+    }
+
+    history.listen(() => {
+      if (history.location.pathname === "/") {
+        toggleShowPre(true);
+      } else {
+        toggleShowPre(false);
+      }
+    });
+  }, [history]);
 
   return (
-    <div>
-      <h1 className="blueTheme">
-        123ttt
-        <span className={TestLayout.error}>我是全局Layout</span>
-      </h1>
+    <>
+      {showPre ? null : (
+        <div
+          className="top-back"
+          onClick={() =>
+            _historyHandler({
+              step: "back",
+              history,
+            })
+          }
+        >
+          {"<<<<"}
+        </div>
+      )}
+
       {children}
-    </div>
+    </>
   );
 };
 

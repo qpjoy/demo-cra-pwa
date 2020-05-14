@@ -1,11 +1,14 @@
 import React from "react";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import loadable from "@loadable/component";
 
 import MainLayout from "@/components/layout/MainLayout";
 
 import Home from "@/components/home/Home";
+import Login from "@/components/login/Login";
 import About from "@/components/about/About";
+
+import "antd/dist/antd.css";
 
 const LazyContact = loadable(() => import("@/components/contact/Contact"), {
   fallback: <div>nothing</div>,
@@ -15,7 +18,7 @@ function Routers() {
   return (
     <Router>
       <MainLayout>
-        <ul>
+        {/* <ul>
           <li>
             <Link to="/">Home</Link>
           </li>
@@ -25,10 +28,13 @@ function Routers() {
           <li>
             <Link to="/contact">Contact</Link>
           </li>
-        </ul>
+        </ul> */}
         <Switch>
           <Route exact path="/">
             <Home />
+          </Route>
+          <Route exact path="/login">
+            <Login />
           </Route>
           <Route exact path="/about">
             <About />

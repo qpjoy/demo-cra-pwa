@@ -1,0 +1,2 @@
+(this["webpackJsonpdemo-cra-pwa"]=this["webpackJsonpdemo-cra-pwa"]||[]).push([[3],{509:function(t,e,n){"use strict";n.r(e);var c=n(0),u=n.n(c);e.default=function(){return Object(c.useEffect)((function(){setTimeout((function(){document.title="tttttt"}),1e4)})),u.a.createElement("div",null,"contact")}}}]);
+//# sourceMappingURL=3.2163afd0.chunk.js.map

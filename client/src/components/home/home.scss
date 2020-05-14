@@ -1,0 +1,78 @@
+.home-container {
+  .home-modal {
+    background-color: white !important;
+  }
+}
+
+.ant-modal.home-modal {
+  .ant-modal-content {
+    min-height: 50vh;
+
+    .ant-modal-body {
+      height: 100%;
+    }
+
+    .approval-box {
+      &__img {
+        margin: 40px 0;
+        text-align: center;
+
+        img {
+          height: 100px;
+          width: 100px;
+        }
+      }
+
+      p {
+        font-size: 32px;
+        font-weight: bold;
+        margin-bottom: 10px;
+        text-align: center;
+      }
+
+      &__account-list {
+        width: 100%;
+      }
+
+      &__account-item {
+        // display: inline-block;
+        float: left;
+        margin-bottom: 20px;
+        margin-left: 2.5%;
+        text-align: center;
+        width: 30%;
+
+        .account-item-box {
+          background-color: #434343;
+          color: #aaa;
+          display: inline-block;
+          font-size: 24px;
+          height: 80px;
+          line-height: 80px;
+          width: 100%;
+
+          &:hover,
+          &:active {
+            background-color: lighten(#434343, 10%);
+          }
+
+          a {
+            color: white;
+          }
+
+          span {
+            color: white;
+            cursor: pointer;
+            display: inline-block;
+            margin-left: 20px;
+
+            &:hover {
+              color: red;
+              transform: scale(1.5);
+            }
+          }
+        }
+      }
+    }
+  }
+}
